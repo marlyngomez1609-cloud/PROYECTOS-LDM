@@ -1,0 +1,288 @@
+/* ---------------------------------------------------- */
+/* 1. Reset Básico y Variables */
+/* ---------------------------------------------------- */
+
+:root {
+    --color-primary: #007BFF; /* Azul principal */
+    --color-secondary: #28a745; /* Verde para destacar */
+    --color-text: #333;
+    --color-background: #f4f7f6;
+    --color-card-background: #ffffff;
+    --font-family: 'Helvetica Neue', Arial, sans-serif;
+    --spacing-large: 2rem;
+    --spacing-medium: 1.5rem;
+    --spacing-small: 0.5rem;
+}
+
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    padding: 0;
+    margin: 0;
+}
+
+/* Contenedor central para limitar el ancho del contenido */
+main {
+    max-width: 1000px;
+    margin: var(--spacing-medium) auto;
+    padding: 0 var(--spacing-medium);
+}
+
+/* ---------------------------------------------------- */
+/* 2. Tipografía y Encabezados */
+/* ---------------------------------------------------- */
+
+h1, h2, h3 {
+    margin-bottom: var(--spacing-small);
+    color: var(--color-primary);
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-bottom: var(--spacing-small);
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: var(--spacing-small);
+    margin-top: var(--spacing-large);
+}
+
+a {
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-secondary);
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------- */
+/* 3. Header y Navegación */
+/* ---------------------------------------------------- */
+
+header {
+    background-color: var(--color-card-background);
+    padding: var(--spacing-large) 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header p {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-bottom: var(--spacing-medium);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 var(--spacing-medium);
+}
+
+nav ul li a {
+    font-weight: bold;
+    color: var(--color-text);
+    padding: 0.25rem 0;
+}
+
+nav ul li a:hover {
+    color: var(--color-primary);
+    text-decoration: none;
+    border-bottom: 2px solid var(--color-primary);
+}
+
+/* ---------------------------------------------------- */
+/* 4. Estilos de Secciones y Tarjetas (Cards) */
+/* ---------------------------------------------------- */
+
+section {
+    background-color: var(--color-card-background);
+    padding: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background: #ccc;
+    margin: var(--spacing-large) 0;
+    display: none; /* Ocultamos la línea horizontal del HTML, usamos el margen de las secciones */
+}
+
+/* Sección Sobre Mí */
+#about figure {
+    float: right; /* Mueve la imagen a la derecha */
+    margin-left: var(--spacing-medium);
+    margin-bottom: var(--spacing-small);
+    text-align: center;
+}
+
+#about img {
+    border-radius: 50%; /* Borde circular para la imagen */
+    border: 3px solid var(--color-primary);
+    display: block;
+}
+
+/* Limpieza de floats después de la figura */
+#about::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* ---------------------------------------------------- */
+/* 5. Estilos de Listas y Contenido */
+/* ---------------------------------------------------- */
+
+/* Listas de habilidades y contacto */
+section ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Lista de descripción para Formación (DT/DD) */
+#formacion dt {
+    font-weight: bold;
+    color: var(--color-secondary);
+    margin-top: var(--spacing-small);
+}
+
+#formacion dd {
+    margin-left: 20px;
+    margin-bottom: var(--spacing-small);
+    padding-left: 5px;
+    border-left: 2px solid #ddd;
+}
+
+/* Estilos para Proyectos (Artículos) */
+#proyectos article {
+    border: 1px solid #eee;
+    padding: var(--spacing-medium);
+    margin-bottom: var(--spacing-medium);
+    border-radius: 4px;
+    background-color: #fafafa;
+}
+
+#proyectos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    display: block;
+    margin-bottom: var(--spacing-small);
+}
+
+
+/* ---------------------------------------------------- */
+/* 6. Formulario de Contacto */
+/* ---------------------------------------------------- */
+
+form {
+    display: grid;
+    gap: var(--spacing-small);
+    max-width: 500px;
+    margin-bottom: var(--spacing-medium);
+}
+
+label {
+    font-weight: bold;
+    margin-top: var(--spacing-small);
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: var(--font-family);
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: var(--spacing-small);
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* ---------------------------------------------------- */
+/* 7. Footer */
+/* ---------------------------------------------------- */
+
+footer {
+    text-align: center;
+    padding: var(--spacing-medium) 0;
+    background-color: #333;
+    color: white;
+    font-size: 0.9rem;
+    margin-top: var(--spacing-large);
+}
+
+footer a {
+    color: #ffc107; /* Color de acento para enlaces en el footer */
+}
+
+/* ---------------------------------------------------- */
+/* 8. Media Queries (Responsividad) */
+/* ---------------------------------------------------- */
+
+@media (max-width: 768px) {
+    main {
+        margin: var(--spacing-medium) 0;
+        padding: 0 var(--spacing-small);
+    }
+    
+    header {
+        padding: var(--spacing-medium) 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 0.5rem 0;
+    }
+    
+    /* En pantallas pequeñas, la figura va arriba y el texto abajo */
+    #about figure {
+        float: none;
+        margin: 0 auto var(--spacing-small);
+    }
+}
