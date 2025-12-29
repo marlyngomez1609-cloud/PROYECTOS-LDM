@@ -3,10 +3,10 @@
 /* ---------------------------------------------------- */
 
 :root {
-    --color-primary: #007BFF; /* Azul principal */
-    --color-secondary: #28a745; /* Verde para destacar */
-    --color-text: #333;
-    --color-background: #f4f7f6;
+    --color-primary: #58065a; /* Azul principal */
+    --color-secondary: #4d058d; /* Verde para destacar */
+    --color-text: #000000;
+    --color-background: #c2eadd;
     --color-card-background: #ffffff;
     --font-family: 'Helvetica Neue', Arial, sans-serif;
     --spacing-large: 2rem;
@@ -226,7 +226,7 @@ textarea {
 
 button[type="submit"] {
     background-color: var(--color-primary);
-    color: white;
+    color: rgb(208, 210, 211);
     padding: 12px 20px;
     border: none;
     border-radius: 4px;
@@ -237,7 +237,7 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #89046a;
 }
 
 /* ---------------------------------------------------- */
@@ -247,14 +247,14 @@ button[type="submit"]:hover {
 footer {
     text-align: center;
     padding: var(--spacing-medium) 0;
-    background-color: #333;
-    color: white;
+    background-color: #1d1b1b;
+    color: rgb(246, 225, 225);
     font-size: 0.9rem;
     margin-top: var(--spacing-large);
 }
 
 footer a {
-    color: #ffc107; /* Color de acento para enlaces en el footer */
+    color: #ad9bef; /* Color de acento para enlaces en el footer */
 }
 
 /* ---------------------------------------------------- */
